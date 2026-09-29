@@ -46,7 +46,7 @@ func search_destroy(x int, y int, grid byte) {
     // 46 is .
     case  byte[x][y] <> 46:
       fmt.Println("Hit! " + string(grid[x][y]))
-      //update fog
+      update_fog(x, y, my_grid, byte[x][y])
       //pic next hit candidate
       //search_destroy call
     case bytep[x][y] = 46:
@@ -55,9 +55,14 @@ func search_destroy(x int, y int, grid byte) {
 
 }
 
-funct update_fog(x int, y int, grid byte) {
+func update_fog(x int, y int, grid byte, grid_value string) {
+   return grid[x][y] = grid_value
+}
 
-
+func hit_candidate(){//need to input direction
+   case //if hit check next to right
+     //if hit update
+     //if miss
 }
 
 func get_next_coord() {
