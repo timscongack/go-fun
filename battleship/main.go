@@ -40,19 +40,19 @@ func main()  {
 
 }
 
-func search_destroy(x int, y int, grid byte) {
+func search_destroy(x int, y int, grid [10][10]byte) {
 
   switch {
     // 46 is .
-    case  byte[x][y] <> 46:
+    case  grid[x][y] != 46:
       fmt.Println("Hit! " + string(grid[x][y]))
-      update_fog(x, y, my_grid, byte[x][y])
+      update_fog(x, y, my_grid, grid[x][y])
       //pic next hit candidate
       //search_destroy call
-    case bytep[x][y] = 46:
+    case grid[x][y] == 46:
       //update fog
       //get next coord (does binary search)
-
+  }
 }
 
 func update_fog(x int, y int, grid byte, grid_value string) {
